@@ -1,0 +1,127 @@
+/* =========================================================
+   style.css - GIAO DIỆN CHUNG CỦA WEBSITE
+   (khung trang, menu, khung đăng nhập, nút bấm, thông báo)
+   CSS riêng của từng bài tập nằm ở css/baitap.css
+   ========================================================= */
+
+:root {
+    --nen-trang:   #999999;   /* nền xung quanh website */
+    --nen-khung:   #92d84e;   /* nền xanh của khung website */
+    --nen-baitap:  #ffffff;   /* nền khung hiển thị bài tập: TRẮNG */
+    --chu:         #111827;
+    --xanh:        #2563eb;
+    --xanh-dam:    #1d4ed8;
+    --luc:         #22c55e;
+    --luc-dam:     #16a34a;
+    --do:          #ef4444;
+    --do-dam:      #dc2626;
+    --cam:         #f59e0b;
+    --vien:        #d1d5db;
+    --chuyen:      all .2s ease;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--nen-trang);
+    color: var(--chu);
+    font: 13px/1.6 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+/* ---------- Khung tổng ---------- */
+.trang {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    background: var(--nen-khung);
+    border-collapse: collapse;
+}
+.trang > tbody > tr > td { border: 1px solid #333; }
+
+.khung-baitap {                 /* ô giữa: nơi hiển thị bài tập */
+    background: var(--nen-baitap);
+    padding: 15px;
+}
+
+/* ---------- Thanh trên + menu trái ---------- */
+.thanh-tren a { display: inline-block; padding: 4px 8px; }
+
+.menu-trai { width: 100%; border-collapse: collapse; }
+.menu-trai th, .menu-trai td { border: 0; padding: 0; background: transparent; }
+.menu-trai th { padding: 10px 8px 6px; text-align: left; color: var(--cam); }
+.menu-trai a {
+    display: block;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: var(--chuyen);
+}
+.menu-trai a:hover { background: #e0f2fe; transform: translateX(3px); }
+.menu-trai .dang-chon { background: #a7f3d0; font-weight: 700; }
+
+a { color: #000; text-decoration: none; }
+
+/* ---------- Khung đăng nhập (cột phải) ---------- */
+.dangnhap {
+    background: #fff;
+    border: 1px solid #dbeafe;
+    border-radius: 10px;
+    padding: 12px 10px;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, .08);
+}
+.dangnhap-tieude {
+    background: #dbeafe;
+    color: var(--xanh-dam);
+    font-weight: 700;
+    text-align: center;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+.dangnhap-dong { margin-bottom: 8px; }
+.dangnhap-dong label { display: block; font-weight: 600; }
+.dangnhap-dong input { width: 100%; }
+.dangnhap-nut { display: flex; gap: 8px; margin-top: 8px; }
+.dangnhap-nut input { flex: 1; }
+.dangnhap-lienket a { display: block; padding: 5px 0; color: var(--xanh-dam); font-weight: 600; }
+
+/* ---------- Ô nhập liệu ---------- */
+input[type=text], input[type=password], input[type=number], select {
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 13px;
+    outline: none;
+    transition: var(--chuyen);
+}
+input:focus, select:focus {
+    border-color: var(--xanh);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .15);
+}
+
+/* ---------- Nút bấm ---------- */
+input[type=submit], input[type=reset], button, .nut {
+    display: inline-block;
+    border: 0;
+    border-radius: 6px;
+    padding: 7px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    background: var(--luc);
+    cursor: pointer;
+    transition: var(--chuyen);
+}
+input[type=submit]:hover, button:hover, .nut:hover { background: var(--luc-dam); }
+input[type=reset], .nut-do { background: var(--do); }
+input[type=reset]:hover, .nut-do:hover { background: var(--do-dam); }
+.nut-xanh, .dangnhap input[type=submit] { background: var(--xanh); }
+.nut-xanh:hover, .dangnhap input[type=submit]:hover { background: var(--xanh-dam); }
+
+/* ---------- Thông báo (thay cho alert) ---------- */
+.thongbao { padding: 10px 14px; margin-bottom: 14px; border-radius: 6px; border: 1px solid; }
+.thongbao-ok  { background: #dcfce7; border-color: #86efac; color: #166534; }
+.thongbao-loi { background: #fee2e2; border-color: #fca5a5; color: #991b1b; }
+
+/* ---------- Chân trang ---------- */
+.chantrang { text-align: center; padding: 6px; }

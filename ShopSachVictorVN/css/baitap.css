@@ -1,0 +1,57 @@
+/* =========================================================
+   baitap.css - CSS RIÊNG CHO CÁC BÀI TẬP (hiển thị trong khung trắng)
+   Muốn chỉnh giao diện bài tập chỉ cần sửa file này.
+   ========================================================= */
+
+.khung-baitap h1, .khung-baitap h2 { color: #1e293b; text-align: center; margin-top: 0; }
+.khung-baitap h2 { font-size: 18px; }
+
+/* Bảng nhập liệu chung (BT1, BT3, đăng ký, sửa thông tin...) */
+.bang-form { margin: 10px auto; border-collapse: collapse; }
+.bang-form td { padding: 7px 10px; vertical-align: middle; }
+.bang-form .label, .bang-form td:first-child { font-weight: 600; }
+.bang-form td[colspan] { text-align: center; }
+.form-actions { display: flex; gap: 10px; justify-content: center; margin-top: 12px; }
+
+/* Kết quả / lỗi */
+.result, .error {
+    width: 90%;
+    margin: 12px auto;
+    padding: 10px 14px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+}
+.result { background: #ecfdf5; border: 1px solid #86efac; color: #166534; }
+.error  { background: #fef2f2; border: 1px solid #fca5a5; color: #991b1b; }
+
+/* BT1 - BT6 */
+.title { text-align: center; }
+.form  { margin: 0 auto; }
+.label { font-weight: 600; }
+
+/* BT7, BT8 - bảng cửu chương */
+.bang-cuuchuong-wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.cuuchuong { border-collapse: collapse; min-width: 150px; background: #fff; border: 1px solid #f5d98b; }
+.cuuchuong th { background: var(--cam); color: #fff; padding: 7px 10px; }
+.cuuchuong td { border: 1px solid #f5d98b; padding: 6px 10px; text-align: center; color: #4b2e00; }
+.cuuchuong tr:nth-child(even) td { background: #fff7ed; }
+
+/* BT10 - tổng các số chẵn */
+.n13 .container { max-width: 520px; margin: 0 auto; text-align: center; }
+.n13 form { margin-bottom: 10px; }
+
+/* PHP-MySQL: thông tin cá nhân */
+.thongtin { margin: 0 auto; border-collapse: collapse; min-width: 380px; }
+.thongtin th { background: #e5e7eb; padding: 10px; }
+.thongtin td { padding: 8px 12px; border-bottom: 1px solid #e5e7eb; }
+.avatar { width: 120px; height: 120px; object-fit: cover; border-radius: 8px; border: 1px solid var(--vien); }
+.avatar-nho { width: 50px; height: 50px; object-fit: cover; border-radius: 6px; }
+
+/* PHP-MySQL: bảng quản trị */
+.bang-quantri { width: 100%; border-collapse: collapse; }
+.bang-quantri th { background: #e5e7eb; }
+.bang-quantri th, .bang-quantri td { border: 1px solid var(--vien); padding: 6px 8px; text-align: center; }
+.bang-quantri form { display: inline; }
+.bang-quantri .nut { padding: 4px 10px; font-size: 12px; color: #fff; }
+.ghi-chu { color: #6b7280; font-size: 12px; text-align: center; }
